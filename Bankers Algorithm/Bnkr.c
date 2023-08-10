@@ -62,10 +62,12 @@ int safetyCheck()
         int found = 0;
 
         for (i = 0; i < numProcesses; i++) {
-            if (finish[i] == 0) {
+            if (finish[i] == 0) 
+            {
                 int safe = 1;
 
-                for (j = 0; j < numResources; j++) {
+                for (j = 0; j < numResources; j++) 
+                {
                     if (need[i][j] > work[j]) {
                         safe = 0;
                         break;
@@ -73,7 +75,8 @@ int safetyCheck()
                 }
 
                 if (safe) {
-                    for (k = 0; k < numResources; k++) {
+                    for (k = 0; k < numResources; k++) 
+                    {
                         work[k] += allocation[i][k];
                     }
 
